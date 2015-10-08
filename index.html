@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/restyle.css" rel="stylesheet" />
+    <link href="css/pagination.css" rel="stylesheet"/>
+</head>
+<body>
+<div>
+    <input id="change" type="button" value="修改页码"/></div>
+    <div class="pagination-con">
+        <div id="paginationCon" class="pagination-container">
+        </div>
+    </div>
+    <div class="pagination-con">
+        <div id="paginationCon1" class="pagination-container">
+        </div>
+    </div>
+<script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/pagination.js"></script>
+<script>
+    $(function(){
+        function init(count){
+            $('#paginationCon1').pagination({
+                position:'left',
+                pageCount:count,
+                btnCallback:function(e){
+                    console.log(e.curIndex);
+                }
+            })
+            $('#paginationCon').pagination({
+                position:'right',
+                pageCount:count,
+                btnCallback:function(e){
+                    console.log(e.curIndex);
+                }
+            })
+        }
+        init(20);
+        $('#change').on('click', function () {//修改搜索条件，页码信息改变
+            init(10);
+        })
+    })
+</script>
+</body>
+</html>

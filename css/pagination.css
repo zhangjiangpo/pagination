@@ -1,0 +1,61 @@
+html,body{
+    font-size: 62.5%;
+    font-family: "微软雅黑","宋体";
+}
+section,div,p,span,i,a{
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+.pagination-con{
+    border:1px solid #ccc;
+    position: relative;
+    width:1200px;
+    height:30px;
+    margin:30px auto;
+}
+.pagination-container{
+    position:absolute;
+    top:0;
+    padding:0 10px;
+}
+.pagination-container p{
+    display: inline-block;
+    _zoom:1;
+    *display:inline;
+}
+.pages-con span{
+    display: inline-block;
+    height:20px;
+    width: 20px;
+    margin:5px;
+    padding:0 5px;
+    text-align: center;
+    border:1px solid #ccc;
+    cursor:pointer;
+}
+.pages-con span:active{
+    background-color: #0a9ec7;
+    color:#fff;
+}
+.pages-con span.active{
+    background-color: #0a9ec7;
+    color:#fff;
+}
+.jump-topage{
+    vertical-align:middle;
+    width:40px;
+}
+.jump-btn{
+    margin-left:3px;
+}
+.next-page,.pre-page{
+    display: inline-block;
+    padding:3px 5px;
+    background-color: #4b8bf4;
+}
+.btn-enabled{
+    color:#ccc;
+    background-color: #fff;
+}
